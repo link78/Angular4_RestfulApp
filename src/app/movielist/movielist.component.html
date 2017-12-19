@@ -1,0 +1,31 @@
+
+<div class="col-xs-3">
+    <button class="btn btn-secondary btn-block" routerLink="/" routerLinkActivate="active">All</button>
+    <button *ngFor="let c of genres" class="btn btn-secondary btn-block" [routerLink]="['/movies',c]" routerLinkActivate="active">
+        {{c}}
+
+    </button>
+
+
+</div>
+
+
+<div class="text-center">
+    <button class="btn btn-primary" [routerLink]="['/movies','create']">Create New Movie</button>
+</div>
+<div *ngIf="movies" class="jumbotron">
+    <div class="row movies-list">
+        <h2 class="text-center">List of movies {{movies.length}} movies</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4 card-group panel-body" *ngFor="let m of movies"  >
+        <div class="card text-white bg-info">
+              <div class="card-title" style="cursor:pointer" [routerLink]="['/movies', m.id]"><h4>{{m.title}}</h4></div>
+              <div class="card-text"><h4>{{m.genre}}</h4></div>
+              <div class="card-text"><p>{{m.price}}</p></div>
+              <div class="card-text"><b>{{m.released}}</b></div>
+        </div> 
+        
+     </div>
+</div>

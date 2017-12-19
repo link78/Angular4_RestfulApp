@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
-  template: `
-    <p>
-      app Works!
-    </p>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl:'./component.html',
   styles: []
 })
 export class AppComponent {

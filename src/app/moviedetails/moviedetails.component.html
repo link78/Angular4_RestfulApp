@@ -1,0 +1,17 @@
+
+<div *ngIf="movie" class="container">
+    <button [routerLink]="['/movies',movie.id,'edit']" class="btn btn-info">Edit</button>
+    <button [routerLink]="['/movies']" (click)="deleteMovie()" class="btn btn-danger">Delete</button>
+    <div class="card text-white bg-success">
+        <h1>Movie Details</h1>
+        <div class="card-title"><h4>Title: {{movie.title}}</h4></div>
+        <div class="card-text"><h4>Genre: {{movie.genre}}</h4></div>
+        <div class="card-text"><p>Price: {{movie.price}}</p></div>
+        <div class="card-text"><b>Released Date: {{movie.released}}</b></div>
+        <div class="card-text" >
+            <img [src]="movie.image" class="movie-image img rounded" style="width:180px; height:200px; border: solid black"/>
+        </div>
+  </div> 
+  
+  <button [routerLink]="['/movies']" class="btn btn-default">Cancel</button>
+</div>

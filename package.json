@@ -4,11 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4400",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "json": "json-server --watch db.json --port 8500" 
   },
   "private": true,
   "dependencies": {
@@ -44,6 +45,9 @@
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "json-server": "0.12.1",
+    "bootstrap": "3.3.7",
+    "jquery": "3.2.1"
   }
 }
